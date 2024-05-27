@@ -1,5 +1,6 @@
 baseURL = 'https://docs-page-d5p.pages.dev'
 languageCode = 'en-us'
+contentDir = "content"
 title = 'Docs Pax Facturacion'
 
 [module]
