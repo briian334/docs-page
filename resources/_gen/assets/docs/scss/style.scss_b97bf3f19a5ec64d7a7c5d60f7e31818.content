@@ -9848,7 +9848,7 @@ i.title-icon {
         .page-wrapper .sidebar-wrapper .sidebar-brand > a:focus {
           outline: none; }
         .page-wrapper .sidebar-wrapper .sidebar-brand > a svg {
-          height: 26px; }
+          height: 100px; }
       .page-wrapper .sidebar-wrapper .sidebar-brand #close-sidebar {
         cursor: pointer;
         font-size: 24px;
@@ -10036,7 +10036,7 @@ i.title-icon {
               .page-wrapper .page-content .top-header .header-bar .logo-icon .small {
                 display: block; } }
             .page-wrapper .page-content .top-header .header-bar .logo-icon .small svg {
-              height: 22px; }
+              height: 90px; }
           .page-wrapper .page-content .top-header .header-bar .logo-icon .big {
             display: none; }
             .page-wrapper .page-content .top-header .header-bar .logo-icon .big .logo-dark-mode {
