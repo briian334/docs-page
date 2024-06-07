@@ -44,7 +44,7 @@
             {{ $flexSearch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/flexsearch.bundle.js") }}
             {{- if not .Site.IsServer }}
                 {{ $flexSearch := $flexSearch | minify | fingerprint "sha384" }}
-                <script type="text/javascript" src="{{ $flexSearch.Permalink }}" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="{{ $flexSearch.Permalink }}"></script>
                 {{ else }}
                 <script type="text/javascript" src="{{ $flexSearch.Permalink }}"></script>
             {{ end }}
@@ -62,7 +62,7 @@
     {{- if hugo.IsProduction }}
         {{- $style = $style | minify | fingerprint "sha384" }}
     {{- end -}}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" {{ if hugo.IsProduction }}{{ end -}} crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" {{ if hugo.IsProduction }}{{ end -}}>
     <!-- Katex CSS -->
     {{- if .Params.katex -}}
     {{- $options := dict "enableSourceMap" true }}
@@ -74,7 +74,7 @@
     {{- if hugo.IsProduction }}
         {{- $katexCSS = $katexCSS | minify | fingerprint "sha384" }}
     {{- end -}}
-    <link rel="stylesheet" href="{{ $katexCSS.RelPermalink }}" {{ if hugo.IsProduction }}{{ end -}} crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ $katexCSS.RelPermalink }}" {{ if hugo.IsProduction }}{{ end -}}>
     {{- end -}}
     <!-- Katex JS -->
     {{- if .Params.katex -}}

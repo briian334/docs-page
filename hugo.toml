@@ -1,7 +1,8 @@
-baseURL = 'https://192.168.3.64:443/' #https://docs-page-d5p.pages.dev
+baseURL = 'https://docs-page-d5p.pages.dev/' #https://192.168.3.64:443/
 languageCode = 'en-us'
 contentDir = "content"
 title = 'Docs Pax Facturacion'
+enableGitInfo = true
 
 [module]
     [[module.imports]]
@@ -24,10 +25,10 @@ title = 'Docs Pax Facturacion'
 
     [params.footer]
         copyright = "© :YEAR: [**PAX Facturacion**](http://www.paxfacturacion.com.mx/). Todos los derechos reservados."
-        # version = true # includes git commit info
+        version = true # includes git commit info
 
     [params.social]
-        github = "PAXFacturacion"        # YOUR_GITHUB_ID or YOUR_GITHUB_URL
+        github = "briian334"        # YOUR_GITHUB_ID or YOUR_GITHUB_URL
         # twitter = ""       # YOUR_TWITTER_ID
         # instagram = ""     # YOUR_INSTAGRAM_ID
         # rss = true                    # show rss icon with link
@@ -46,8 +47,8 @@ title = 'Docs Pax Facturacion'
         prismTheme      = "solarized-light"                           # (optional) - Set theme for PrismJS. Options include: lotusdocs (default), solarized-light, twilight, lucario
 
         # gitinfo
-        repoURL         = "https://github.com/"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
-        repoBranch      = "release"
+        repoURL         = "https://github.com/briian334/docs-page"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
+        repoBranch      = "main"
         editPage        = true                                # enable 'Edit this page' feature - default false
         lastMod         = true                                # enable 'Last modified' date on pages - default false
         lastModRelative = true                                # format 'Last modified' time as relative - default true
