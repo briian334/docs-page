@@ -196,25 +196,25 @@ A la hora de utilizar nuestro servicio es posible que te encuentres con ciertos 
 {{< table  "table-borderless" >}}
 | Código | Descripción |
 |---------|--------|
-| `301` | XML mal formado |
-| `302` | Sello mal formado o inválido |
-| `303` | Sello no corresponde a emisor o caduco |
-| `304` | Certificado revocado o caduco |
-| `305` | La fecha de emisión no está dentro de la vigencia del CSD del Emisor |
-| `306` | El certificado no es de tipo CSD |
-| `307` | El CFDI contiene un timbre previo |
-| `308` | Certificado no expedido por el SAT |
-| `401` | Que el rango de la fecha de generación no sea mayor a 72 horas para la emisión del timbre |
-| `402` | Que exista el RFC del emisor conforme al régimen autorizado (Lista de validación de régimen) LCO |
-| `403` | Que la fecha de emisión sea posterior al 01 de Enero 2011 |
-| `509` | Verifique el RFC del receptor |
+| `301` | XML mal formado. |
+| `302` | Sello mal formado o inválido. |
+| `303` | Sello no corresponde a emisor o caduco. |
+| `304` | Certificado revocado o caduco. |
+| `305` | La fecha de emisión no está dentro de la vigencia del CSD del Emisor. |
+| `306` | El certificado no es de tipo CSD. |
+| `307` | El CFDI contiene un timbre previo. |
+| `308` | Certificado no expedido por el SAT. |
+| `401` | Que el rango de la fecha de generación no sea mayor a 72 horas para la emisión del timbre. |
+| `402` | Que exista el RFC del emisor conforme al régimen autorizado (Lista de validación de régimen) LCO. |
+| `403` | Que la fecha de emisión sea posterior al 01 de Enero 2011. |
+| `509` | Verifique el RFC del receptor. |
 | `404` | La fecha de emisión es posterior a la fecha de timbrado. |
-| `100` | El archivo de texto está mal formado |
-| `406` | El nombre de documento no corresponde a ninguno del sistema |
-| `570` | No se pudo recuperar el certificado del comprobante |
-| `622` | El servicio no está disponible |
-| `817` | No se pudo generar el sello del PAC |
-| `999` | Error durante el registro del comprobante |
+| `100` | El archivo de texto está mal formado. |
+| `406` | El nombre de documento no corresponde a ninguno del sistema. |
+| `570` | No se pudo recuperar el certificado del comprobante. |
+| `622` | El servicio no está disponible. |
+| `817` | No se pudo generar el sello del PAC. |
+| `999` | Error durante el registro del comprobante. |
 | `96`  | Usuario o contraseña incorrecta. |
 | `97`  | No hay créditos disponibles. |
 {{< /table >}}
