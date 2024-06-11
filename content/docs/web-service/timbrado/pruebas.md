@@ -47,7 +47,7 @@ La estructura de la petición es la siguiente:
 ### Parámetros
 
 {{< table  "table-striped" >}}
-| Parámetro | Descripción | Ejemplo |
+| Parámetro | Descripción | Valor |
 |-----------|-------------|---------|
 | `psComprobante` | Documento XML (en formato de cadena, una sola línea sin encabezado) | |
 | `psTipoDocumento` | Tipo de documento (Usar clave numérica) | 01, 02, 03, 04, 05, 06, 07, 08, 09, 10 |
@@ -169,11 +169,11 @@ const axios = require('axios');
 
 async function enviarXML() {
   const documentoXML = 'tu XML aquí';
-  const tipoDocumento = 'factura';
+  const tipoDocumento = '01';
   const idEstructura = 0;
-  const nombreUsuario = 'nombre_usuario';
+  const nombreUsuario = 'usuario';
   const contraseña = 'password64';
-  const version = '3.2';
+  const version = '3.3';
 
   const response = await axios.post('URL del servicio aquí', {
     psComprobante: documentoXML,
@@ -202,11 +202,11 @@ $client = new \GuzzleHttp\Client();
 $response = $client->request('POST', 'URL del servicio aquí', [
     'form_params' => [
         'psComprobante' => 'tu XML aquí',
-        'psTipoDocumento' => 'factura',
+        'psTipoDocumento' => '01',
         'pnId_Estructura' => 0,
-        'sNombre' => 'nombre_usuario',
+        'sNombre' => 'usuario',
         'sContraseña' => 'password64',
-        'sVersion' => '3.2'
+        'sVersion' => '3.3'
     ]
 ]);
 
