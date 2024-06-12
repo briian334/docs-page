@@ -14,19 +14,19 @@
   src: local("Material Symbols Outlined"), local("Material Icons"), local("MaterialIcons-Outlined"), url("../fonts/material-symbols-outlined.woff2") format("woff2"); }
 
 :root {
-  --primary: var(--green);
-  --primary-50: var(--green-50);
-  --primary-100: var(--green-100);
-  --primary-200: var(--green-200);
-  --primary-300: var(--green-300);
-  --primary-400: var(--green-400);
-  --primary-800: var(--green-800);
-  --primary-hsl: var(--green-500-hsl);
-  --primary-50-hsl: var(--green-50-hsl);
-  --primary-100-hsl: var(--green-100-hsl);
-  --primary-200-hsl: var(--green-200-hsl);
-  --primary-300-hsl: var(--green-300-hsl);
-  --primary-800-hsl: var(--green-800-hsl); }
+  --primary: var(--emerald);
+  --primary-50: var(--emerald-50);
+  --primary-100: var(--emerald-100);
+  --primary-200: var(--emerald-200);
+  --primary-300: var(--emerald-300);
+  --primary-400: var(--emerald-400);
+  --primary-800: var(--emerald-800);
+  --primary-hsl: var(--emerald-500-hsl);
+  --primary-50-hsl: var(--emerald-50-hsl);
+  --primary-100-hsl: var(--emerald-100-hsl);
+  --primary-200-hsl: var(--emerald-200-hsl);
+  --primary-300-hsl: var(--emerald-300-hsl);
+  --primary-800-hsl: var(--emerald-800-hsl); }
 
 /*!
    * Bootstrap  v5.3.3 (https://getbootstrap.com/)

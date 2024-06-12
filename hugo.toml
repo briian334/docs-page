@@ -14,7 +14,7 @@ enableGitInfo = true
 [markup.goldmark.renderer]
     unsafe = true
 [params]
-
+version = "1.0.0"
   google_fonts = [
     ["Inter", "300, 400, 600, 700"],
     ["Fira Code", "500, 700"]
@@ -39,7 +39,7 @@ enableGitInfo = true
 
         pathName        = "docs"                            # path name for documentation site | default "docs"
 
-        themeColor      = "green"                            # (optional) - Set theme accent colour. Options include: blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
+        themeColor      = "emerald"                            # (optional) - Set theme accent colour. Options include: blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
 
         darkMode        = true                                # enable dark mode option? default false
 
