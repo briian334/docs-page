@@ -11,8 +11,7 @@
 <html lang="{{ site.LanguageCode }}">
     {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head.html") . -}}
     <body>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0&appId=3544797805667083" nonce="zAlHO9xN"></script>
+        
         <div class="content">
             <div class="page-wrapper toggled">
                 {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "sidebar.html") . -}}
