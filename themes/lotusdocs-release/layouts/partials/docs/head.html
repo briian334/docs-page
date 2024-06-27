@@ -29,17 +29,10 @@
 	($.Scratch.Get "pathName") "head/twitter_cards") . }}
 
 	<!-- Dark Mode -->
-	{{ if eq .Site.Params.docs.darkMode true -}} {{ $darkModeInit := resources.Get
-	(printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-init.js") | js.Build
-	| minify -}}
-	<script>
-		{
-			{
-				$darkModeInit.Content | safeJS;
-			}
-		}
-	</script>
-	{{ end -}}
+    {{ if eq .Site.Params.docs.darkMode true -}}
+        {{ $darkModeInit := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-init.js") | js.Build | minify -}}
+        <script>{{ $darkModeInit.Content | safeJS }}</script>
+    {{ end -}}
 	<!-- FlexSearch -->
 	{{ if or (not (isset .Site.Params.flexsearch "enabled")) (eq
 	.Site.Params.flexsearch.enabled true) -}} {{ if and

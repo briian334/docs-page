@@ -90,8 +90,6 @@ La estructura de la petición para enviar el timbrado es el XML previamente sell
 </cfdi:Comprobante>
 ```
 
-**[no cookies]**
-
 ### Cabeceras de petición:
 
 {{< table  "table-striped" >}}
@@ -103,6 +101,7 @@ La estructura de la petición para enviar el timbrado es el XML previamente sell
 | `Content-Length` | 4672 |
 | `Host` | test.paxfacturacion.com.mx:490 |
 | `Agent` | Apache-HttpClient/4.5.3 (Java/1.8.0_401) |
+|  | [no cookies] |
 {{< /table >}}
 
 {{% alert icon="⚠️" context="warning" %}}
@@ -218,3 +217,150 @@ A la hora de utilizar nuestro servicio es posible que te encuentres con ciertos 
 | `96`  | Usuario o contraseña incorrecta. |
 | `97`  | No hay créditos disponibles. |
 {{< /table >}}
+
+‎
+
+## Obtener ticket de autenticación
+
+Para consumir los servicios de `timbrado` es necesario contar con un `ticket` de autenticación. Por ello, a continuación te mostramos algunos ejemplos para obtener dicho ticket.  
+
+‎
+
+### Usuario y contraseña
+El usuario y contraseña para pruebas son los siguientes:
+  
+**Usuario:**  
+`WSDL_PAX`  
+‎  
+**Contraseña:**  
+`wqfCr8O3xLfEhMOHw4nEjMSrxJnvv7bvvr4cVcKuKkBEM++/ke+/gCPvv4nvvrfvvaDvvb/vvqTvvoA=`  
+
+‎
+
+### Formato de petición
+
+{{% alert context="success" %}}
+**`POST`** **https://test.paxfacturacion.com.mx:490/api/login/autenticacion**
+{{% /alert %}}
+
+{{< tabs tabTotal="2">}}
+{{% tab tabName="XML" %}}
+
+<!-- XML Content -->
+Ejemplo con formato XML para obtener el ticket de autenticación para el consumo de los servicios de timbrado:
+
+#### Cuerpo de petición
+
+```xml
+<Credential>
+    <Username>WSDL_PAX</Username>
+    <Password> wqfCr8O3xLfEhMOHw4nEjMSrxJnvv7bvvr4cVcKuKkBEM++/ke+/gCPvv4nvvrfvvaDvvb/vvqTvvoA=
+    </Password>
+</Credential>
+```
+
+‎
+
+#### Cabeceras de petición:
+
+{{< table  "table-striped" >}}
+| Key | Value |
+|---------|--------|
+| `Connection` | keep-alive |
+| `Content-Type` | text/xml |
+| `Content-Length` | 165 |
+| `Host` | test.paxfacturacion.com.mx:490 |
+| `User-Agent` | Apache-HttpClient/4.5.3 (Java/1.8.0_401) |
+| `[no cookies]` |  |
+{{< /table >}}
+
+‎
+
+{{% alert context="info" %}}
+Enviar el header `Content-Type` con este tipo de contenido: `text/xml`
+{{% /alert %}}
+‎
+
+#### Respuesta de petición
+
+```xml
+<Resultado Estatus="yes" LatenciaMS="6" FechaTransaccion="2024-03-05T13:54:25"
+    IdTransaccion="48689341">
+    <Usuario>WSDL_PAX</Usuario>
+    <Token>
+        <Tipo>Bearer</Tipo>
+        <Datos>
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IldTRExfUEFYIiwicm9sZSI6IlVzdWFyaW8iLCJuYmYiOjE3MDk2Njg0NjUsImV4cCI6MTcwOTY5MDA2NSwiaWF0IjoxNzA5NjY4NDY1LCJpc3MiOiJodHRwczovL3Rlc3QucGF4ZmFjdHVyYWNpb24uY29tLm14OjQ5MCIsImF1ZCI6Imh0dHBzOi8vdGVzdC5wYXhmYWN0dXJhY2lvbi5jb20ubXg6NDkwIn0.RLknIRsxWQoW-oSUcUVUix_hWIwEdudQQq3iZ8r0VQU</Datos>
+        <Longitud>332</Longitud>
+        <Expedido>Tue, 05 Mar 2024 13:54:25 MDT</Expedido>
+        <Expira>Tue, 05 Mar 2024 19:54:25 MDT</Expira>
+    </Token>
+</Resultado>
+```
+
+{{% /tab %}}
+{{% tab tabName="JSON" %}}
+
+<!-- JSON Content -->
+Ejemplo con formato JSON para obtener el ticket de autenticación para el consumo de los servicios de timbrado:
+
+#### Cuerpo de petición
+
+```json
+{
+    "Username": "wsdl_pax",
+    "Password": "w4LDisOLw7TDqsOlxYvEuMS+xKHCucKYwqPDkWFvw4/DmcS1w68fHe+/hO+/jO+9ne++jO++rO++mg=="
+}
+```
+
+‎
+
+#### Cabeceras de petición:
+
+{{< table  "table-striped" >}}
+| Key | Value |
+|---------|--------|
+| `Connection` | keep-alive |
+| `Content-Type` | application/json |
+| `Content-Length` | 129 |
+| `Host` | test.paxfacturacion.com.mx:490 |
+| `User-Agent` | Apache-HttpClient/4.5.3 (Java/1.8.0_401) |
+| `[no cookies]` |  |
+{{< /table >}}
+
+‎
+
+{{% alert context="info" %}}
+Enviar el header `Content-Type` con este tipo de contenido: `application/json`
+{{% /alert %}}
+‎
+
+#### Respuesta
+
+```json
+{
+    "Resultado": {
+        "@Estatus": "yes",
+        "@LatenciaMS": "6",
+        "@FechaTransaccion": "2024-03-05T14:00:56",
+        "@IdTransaccion": "81365960",
+        "Usuario": "wsdl_pax",
+        "Token": {
+            "Tipo": "Bearer",
+            "Datos": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IndzZGxfcGF4Iiwicm9sZSI6IlVzdWFyaW8iLCJuYmYiOjE3MDk2Njg4NTYsImV4cCI6MTcwOTY5MDQ1NiwiaWF0IjoxNzA5NjY4ODU2LCJpc3MiOiJodHRwczovL3Rlc3QucGF4ZmFjdHVyYWNpb24uY29tLm14OjQ5MCIsImF1ZCI6Imh0dHBzOi8vdGVzdC5wYXhmYWN0dXJhY2lvbi5jb20ubXg6NDkwIn0.0-VoM25Knv38uLP9lzrIwu1BtjDJKkFaeiwDr7EJlJA",
+            "Longitud": "332",
+            "Expedido": "Tue, 05 Mar 2024 14:00:56 MDT",
+            "Expira": "Tue, 05 Mar 2024 20:00:56 MDT"
+        }
+    }
+}
+```
+
+{{% /tab %}}
+{{< /tabs >}}
+
+‎
+
+{{% alert context="warning" %}}
+El `token` se obtiene del atributo **`Datos`** de la respuesta, y su vigencia está expresada en el atributo **`Expira`**, que indica el tiempo durante el cual se puede utilizar hasta que sea necesario obtener uno nuevo.
+{{% /alert %}}
