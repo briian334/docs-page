@@ -22,7 +22,7 @@ https://test.paxfacturacion.com.mx:490/api/cfdi/timbrar40
 La estructura de la petición para enviar el timbrado es el XML previamente sellado. El siguiente ejemplo muestra la manera correcta de como realizarlo.
 
 {{% alert context="success" %}}
-**`POST`** **https://test.paxfacturacion.com.mx:490/api/cfdi/timbrar40**
+Petición de tipo [`POST`](https://test.paxfacturacion.com.mx:490/api/cfdi/timbrar40)
 {{% /alert %}}
 
 ### Cuerpo de petición
@@ -239,8 +239,13 @@ El usuario y contraseña para pruebas son los siguientes:
 
 ### Formato de petición
 
+La [URL](https://test.paxfacturacion.com.mx:490/api/login/autenticacion) a la que debes mandar la petición es la siguiente:
+
+```url
+https://test.paxfacturacion.com.mx:490/api/login/autenticacion
+```
 {{% alert context="success" %}}
-**`POST`** **https://test.paxfacturacion.com.mx:490/api/login/autenticacion**
+Petición de tipo [`POST`](https://test.paxfacturacion.com.mx:490/api/login/autenticacion)
 {{% /alert %}}
 
 {{< tabs tabTotal="2">}}
@@ -315,7 +320,7 @@ Ejemplo con formato JSON para obtener el ticket de autenticación para el consum
 
 ‎
 
-#### Cabeceras de petición:
+#### Cabeceras de petición
 
 {{< table  "table-striped" >}}
 | Key | Value |

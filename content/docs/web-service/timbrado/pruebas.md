@@ -22,8 +22,8 @@ El método disponible para el consumo del servicio es [fnEnviarXML](https://test
 
 La estructura de la petición es la siguiente:
 
-{{% alert icon=" " context="success" %}}
-**`POST`** **https://test.paxfacturacion.com.mx:453/webservices/wcfRecepcionASMX.asmx**
+{{% alert context="success" %}}
+Petición de tipo [`POST`](https://test.paxfacturacion.com.mx:453/webservices/wcfRecepcionASMX.asmx)
 {{% /alert %}}
 
 ```xml
